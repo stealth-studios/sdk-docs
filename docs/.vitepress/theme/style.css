@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Tailwind
+*/
+:root {
+	--tw-brand-1: theme("colors.amber.500");
+	--tw-brand-2: theme("colors.amber.400");
+	--tw-brand-3: theme("colors.amber.300");
+
+	--vp-c-brand-1: theme("colors.amber.500");
+	--vp-c-brand-2: theme("colors.amber.500");
+	--vp-c-brand-3: theme("colors.amber.500");
+	--vp-c-brand-soft: theme("colors.amber.200");
+}
+
+:root[class="dark"] {
+	--vp-c-brand-1: theme("colors.amber.500");
+	--vp-c-brand-2: theme("colors.amber.600");
+	--vp-c-brand-3: theme("colors.amber.500");
+	--vp-c-brand-soft: theme("colors.amber.400");
+}
+
+:root {
+	--vp-c-default-1: var(--vp-c-gray-1);
+	--vp-c-default-2: var(--vp-c-gray-2);
+	--vp-c-default-3: var(--vp-c-gray-3);
+	--vp-c-default-soft: var(--vp-c-gray-soft);
+
+	--vp-c-tip-1: var(--vp-c-brand-1);
+	--vp-c-tip-2: var(--vp-c-brand-2);
+	--vp-c-tip-3: var(--vp-c-brand-3);
+	--vp-c-tip-soft: var(--vp-c-brand-soft);
+
+	--vp-c-warning-1: var(--vp-c-yellow-1);
+	--vp-c-warning-2: var(--vp-c-yellow-2);
+	--vp-c-warning-3: var(--vp-c-yellow-3);
+	--vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+	--vp-c-danger-1: var(--vp-c-red-1);
+	--vp-c-danger-2: var(--vp-c-red-2);
+	--vp-c-danger-3: var(--vp-c-red-3);
+	--vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+	--vp-button-brand-border: transparent;
+	--vp-button-brand-text: var(--vp-c-white);
+	--vp-button-brand-bg: var(--vp-c-brand-3);
+	--vp-button-brand-hover-border: transparent;
+	--vp-button-brand-hover-text: var(--vp-c-white);
+	--vp-button-brand-hover-bg: var(--vp-c-brand-2);
+	--vp-button-brand-active-border: transparent;
+	--vp-button-brand-active-text: var(--vp-c-white);
+	--vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+	--vp-home-hero-name-color: transparent;
+	--vp-home-hero-name-background: -webkit-linear-gradient(
+		120deg,
+		var(--tw-brand-1) 30%,
+		var(--tw-brand-2)
+	);
+
+	--vp-home-hero-image-background-image: linear-gradient(
+		-45deg,
+		var(--tw-brand-1) 30%,
+		var(--tw-brand-2)
+	);
+	--vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+	:root {
+		--vp-home-hero-image-filter: blur(56px);
+	}
+}
+
+@media (min-width: 960px) {
+	:root {
+		--vp-home-hero-image-filter: blur(72px);
+	}
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+	--vp-custom-block-tip-border: theme("colors.indigo.500");
+	--vp-custom-block-tip-text: var(--vp-c-text-1);
+	--vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+.custom-block.tip {
+	@apply bg-indigo-500/25 text-white;
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+	--docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+.VPNavBar {
+	/* make background blur */
+	@apply backdrop-blur-sm !important;
+	@apply bg-opacity-50 !important;
+	@apply bg-white/80 dark:bg-zinc-900/80 !important;
+}
+
+.divider-line {
+	@apply bg-zinc-200 dark:bg-zinc-800 !important;
+}
+
+.VPHomeHero > .container > .main {
+	/* center elements horizontally */
+	/* center text */
+	@apply flex flex-col items-center !important;
+	@apply text-center !important;
+}
+
+.hero-gradient {
+	background-image: radial-gradient(
+			at 10% 80%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 45%
+		),
+		radial-gradient(
+			at 90% 10%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 35%
+		),
+		radial-gradient(
+			at 50% 50%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 55%
+		),
+		radial-gradient(
+			at 0% 0%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 25%
+		),
+		radial-gradient(
+			at 100% 100%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 50%
+		),
+		radial-gradient(
+			at 30% 30%,
+			color-mix(in srgb, var(--vp-c-brand-3) 35%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 70% 70%,
+			color-mix(in srgb, var(--vp-c-brand-3) 30%, transparent) 0px,
+			transparent 35%
+		),
+		radial-gradient(
+			at 20% 40%,
+			color-mix(in srgb, theme(colors.amber.600) 25%, transparent) 0px,
+			transparent 30%
+		),
+		radial-gradient(
+			at 80% 60%,
+			color-mix(in srgb, theme(colors.amber.600) 20%, transparent) 0px,
+			transparent 25%
+		),
+		radial-gradient(
+			at 50% 50%,
+			color-mix(in srgb, var(--vp-c-brand-2) 45%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 15% 15%,
+			color-mix(in srgb, var(--vp-c-brand-3) 30%, transparent) 0px,
+			transparent 30%
+		),
+		radial-gradient(
+			at 85% 85%,
+			color-mix(in srgb, theme(colors.amber.800) 100%, transparent) 0px,
+			transparent 100%
+		),
+		radial-gradient(
+			at 40% 80%,
+			color-mix(in srgb, var(--vp-c-brand-3) 35%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 60% 20%,
+			color-mix(in srgb, var(--vp-c-brand-2) 40%, transparent) 0px,
+			transparent 45%
+		);
+}
+
+.dark .hero-gradient {
+	background-image: radial-gradient(
+			at 10% 80%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 45%
+		),
+		radial-gradient(
+			at 90% 10%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 35%
+		),
+		radial-gradient(
+			at 50% 50%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 55%
+		),
+		radial-gradient(
+			at 0% 0%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 25%
+		),
+		radial-gradient(
+			at 100% 100%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 50%
+		),
+		radial-gradient(
+			at 30% 30%,
+			color-mix(in srgb, var(--vp-c-brand) 15%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 70% 70%,
+			color-mix(in srgb, var(--vp-c-brand) 10%, transparent) 0px,
+			transparent 35%
+		),
+		radial-gradient(
+			at 20% 40%,
+			color-mix(in srgb, var(--vp-c-brand) 8%, transparent) 0px,
+			transparent 30%
+		),
+		radial-gradient(
+			at 80% 60%,
+			color-mix(in srgb, var(--vp-c-brand) 5%, transparent) 0px,
+			transparent 25%
+		),
+		radial-gradient(
+			at 50% 50%,
+			color-mix(in srgb, var(--vp-c-brand) 20%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 15% 15%,
+			color-mix(in srgb, var(--vp-c-brand) 10%, transparent) 0px,
+			transparent 30%
+		),
+		radial-gradient(
+			at 85% 85%,
+			color-mix(in srgb, var(--vp-c-brand) 8%, transparent) 0px,
+			transparent 35%
+		),
+		radial-gradient(
+			at 40% 80%,
+			color-mix(in srgb, var(--vp-c-brand) 12%, transparent) 0px,
+			transparent 40%
+		),
+		radial-gradient(
+			at 60% 20%,
+			color-mix(in srgb, var(--vp-c-brand) 15%, transparent) 0px,
+			transparent 45%
+		);
+}
+
+.VPButton {
+	@apply shadow-md rounded-md !important;
+}
