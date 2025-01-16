@@ -119,7 +119,7 @@ export default defineVersionedConfig(
 			},
 
 			socialLinks: [
-				{ icon: "github", link: "https://github.com/stealth-studios/sdk-core" },
+				{ icon: "github", link: "https://github.com/stealth-studios" },
 				{ icon: "x", link: "https://x.com/StealthSDK" },
 			],
 		},

@@ -56,7 +56,7 @@
 						tag="a"
 						size="medium"
 						text="GitHub"
-						href="https://github.com/stealth-studios/sdk-core"
+						href="https://github.com/stealth-studios"
 						target="_blank"
 						rel="noopener noreferrer"
 						icon="github-mark-white.svg"
