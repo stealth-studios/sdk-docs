@@ -21,7 +21,6 @@ Transform your games with Stealth SDK - the bridge between cutting-edge AI and i
   - Flexible, modular architecture that scales with your vision
   - Create, share, and discover powerful custom extensions
   - Adaptable integration options for projects of any size
-  - Vibrant ecosystem of community-driven innovations
 
 - 🚀 **Limitless Possibilities**
   - Create everything from simple NPCs to complex AI companions
