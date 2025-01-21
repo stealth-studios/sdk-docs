@@ -106,14 +106,22 @@ export default defineVersionedConfig(
 					},
 					{
 						text: "Frameworks",
-						items: [
-							{ text: "Basic", link: "/frameworks/basic" },
-							{ text: "Eliza", link: "/frameworks/eliza" },
-						],
+						items: [{ text: "Basic", link: "/frameworks/basic" }],
 					},
 					{
 						text: "Adapters",
-						items: [{ text: "PostgreSQL", link: "/adapters/postgres" }],
+						items: [
+							{ text: "PostgreSQL", link: "/adapters/postgres" },
+							{ text: "SQLite", link: "/adapters/sqlite" },
+						],
+					},
+					{
+						text: "Custom",
+						items: [
+							{ text: "Framework", link: "/custom/framework" },
+							{ text: "Adapter", link: "/custom/adapter" },
+							{ text: "Client", link: "/custom/client" },
+						],
 					},
 				],
 			},
@@ -124,7 +132,9 @@ export default defineVersionedConfig(
 			],
 		},
 		markdown: {
+			lineNumbers: true,
 			config(md) {
+				// @ts-ignore - this works fine?
 				md.use(groupIconMdPlugin);
 			},
 		},

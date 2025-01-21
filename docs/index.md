@@ -15,4 +15,6 @@ features:
     details: Built with modularity at its core, enabling developers to easily create custom features, integrations, and extensions to meet specific needs
   - title: Versatile Implementation
     details: From sophisticated conversational agents to simple game-world AIs, deploy intelligent solutions that perfectly match your project requirements
+  - title: Battle-Tested Performance
+    details: Rely on a robust, scalable architecture that's been optimized for performance and stability in real-world game environments with over 30K+ concurrent users
 ---

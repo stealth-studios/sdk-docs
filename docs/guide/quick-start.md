@@ -50,7 +50,29 @@ bun add @stealth-studios/sdk-core
 
 ## 🔧 Setting Up The Backend
 
-For the sake of simplicity, we will be using the [Basic Framework](/frameworks/basic) and the [SQLite Adapter](/adapters/sqlite) in this guide. You can replace these with any other framework or adapter of your choice.
+For the sake of simplicity, we will be using the [Basic Framework](../frameworks/basic) and the [SQLite Adapter](../adapters/sqlite) in this guide. You can replace these with any other framework or adapter of your choice.
+
+Install these packages using your preferred package manager:
+
+::: code-group
+
+```sh [npm]
+npm install @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+```
+
+```sh [yarn]
+yarn add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+```
+
+```sh [pnpm]
+pnpm add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+```
+
+```sh [bun]
+bun add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+```
+
+:::
 
 To get your backend up and running, you'll need to create a new instance of the SDK core package. Here's how you can do it:
 
@@ -61,7 +83,7 @@ import SQLiteAdapter from "@stealth-studios/sdk-adapter-sqlite";
 
 const core = new Core({
 	adapter: new SQLiteAdapter({
-		file: "../data/db.sqlite",
+		file: "file:./db.sqlite",
 	}),
 	framework: new BasicFramework({
 		apiKey: "YOUR_OPENAI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file

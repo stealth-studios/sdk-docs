@@ -5,7 +5,7 @@
 		</DefaultTheme.Layout>
 		<div
 			v-if="frontmatter.layout === 'home'"
-			class="pointer-events-none z-[-1] h-[100vh] absolute top-0 w-full hero-gradient blur-lg animate-blur"
+			class="pointer-events-none z-[-1] h-[100vh] absolute top-0 w-full hero-gradient blur-lg animate-blur overflow-hidden"
 		/>
 	</div>
 </template>

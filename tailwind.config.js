@@ -18,7 +18,7 @@ module.exports = {
 						opacity: "var(--tw-blur-opacity, 0.2)",
 					},
 					"50%": {
-						filter: "blur(0px)",
+						filter: "blur(30px)",
 						opacity: "var(--tw-blur-opacity, 0.3)",
 					},
 					"100%": {

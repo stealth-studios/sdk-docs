@@ -22,11 +22,11 @@
 
 		if (!length) {
 			return;
-		} else if (length === 2) {
+		} else if (length <= 2) {
 			return "grid-2";
-		} else if (length === 3) {
+		} else if (length <= 3) {
 			return "grid-3";
-		} else if (length % 3 === 0) {
+		} else if (length % 3 === 0 || length % 3 === 1) {
 			return "grid-6";
 		} else if (length > 3) {
 			return "grid-4";
@@ -79,7 +79,7 @@
 
 	.container {
 		margin: 0 auto;
-		max-width: 1440px;
+		max-width: 1750px;
 	}
 
 	.items {
@@ -106,25 +106,25 @@
 		.item.grid-2,
 		.item.grid-4,
 		.item.grid-6 {
-			width: calc(100% / 2);
+			width: calc(100% / 3);
 		}
 	}
 
 	@media (min-width: 768px) {
 		.item.grid-2,
 		.item.grid-4 {
-			width: calc(100% / 2);
+			width: calc(100% / 3);
 		}
 
 		.item.grid-3,
 		.item.grid-6 {
-			width: calc(100% / 3);
+			width: calc(100% / 4);
 		}
 	}
 
 	@media (min-width: 960px) {
 		.item.grid-4 {
-			width: calc(100% / 4);
+			width: calc(100% / 5);
 		}
 	}
 </style>

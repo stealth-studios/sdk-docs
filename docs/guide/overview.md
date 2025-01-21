@@ -44,4 +44,4 @@ The clients, on the other hand, are responsible for handling the user interface 
 
 ## 🚀 Getting Started
 
-Ready to dive in? Check out our [Quick Start Guide](/guide/quick-start.md) to get up and running with Stealth SDK in minutes.
+Ready to dive in? Check out our [Quick Start Guide](./quick-start.md) to get up and running with Stealth SDK in minutes.
