@@ -180,6 +180,8 @@ The `getConversationBy` method is used to get a conversation by its id, secret, 
 
 You may use the `getConversationBy` adapter method to get the conversation.
 
+---
+
 ### Finish Conversation
 
 ```typescript

@@ -48,10 +48,10 @@ const core = new Core({
 	adapter: new SQLiteAdapter({
 		file: process.env.DATABASE_URL!,
 	}),
-	framework: new BasicFramework({
-		// [!code focus]
+	framework: new BasicFramework({// [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
-		model: "openai", // [!code focus]
+		provider: "openai", // [!code focus]
+        model: "chatgpt-4o-latest", // [!code focus]
 		memorySize: 15, // How many messags of context should the framework remember? // [!code focus]
 	}), // [!code focus]
 	config: {
@@ -69,7 +69,8 @@ That's all you need to set up a backend using the basic framework! Use any suppo
 The Basic Framework supports the following configuration options:
 
 - `apiKey`: Your API key for the AI model provider
-- `model`: The AI model to use for generating responses (supported: `openai`, `anthropic`, `deepseek`)
+- `provider`: The AI provider to use for generating responses (supported: `openai`, `anthropic`, `deepseek`)
+- `model`: The specific AI model to use for generating responses. Ensure that the model is supported by the provider.
 - `memorySize`: The number of previous messages to remember for context tracking.
 
   :::info

@@ -37,7 +37,8 @@ const core = new Core({
 	}), // [!code focus]
 	framework: new BasicFramework({
 		apiKey: process.env.API_KEY!,
-		model: "openai",
+		provider: "openai",
+		model: "chatgpt-4o-latest",
 		memorySize: 15,
 	}),
 	config: {

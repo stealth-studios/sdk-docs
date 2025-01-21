@@ -12,7 +12,7 @@ The TypeScript client provides a simple yet powerful interface for interacting w
 
 ## 🌟 Example
 
-An example project using discord.js is provided [https://github.com/stealth-studios/sdk-client-ts/tree/main/example](here).
+An example project using discord.js is provided [here](https://github.com/stealth-studios/sdk-client-ts/tree/main/example).
 
 ## 🚧 Installation
 

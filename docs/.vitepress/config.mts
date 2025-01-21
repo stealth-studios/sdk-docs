@@ -32,8 +32,18 @@ export default defineVersionedConfig(
 					media: "(prefers-color-scheme: dark)",
 				},
 			],
+			[
+				"meta",
+				{
+					name: "darkreader-lock",
+				},
+			],
 		],
 		themeConfig: {
+			logo: {
+				dark: "/public/stealth-logo.svg",
+				light: "/public/stealth-logo-black.svg",
+			},
 			editLink: {
 				pattern:
 					"https://github.com/stealth-studios/sdk-docs/edit/main/docs/:path",

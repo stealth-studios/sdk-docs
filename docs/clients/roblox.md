@@ -200,7 +200,7 @@ A character file consists of the following sections:
   - `interestRadius`: The radius in studs within which the character can hear and respond to messages.
 - `events`: View the [Events](#events) section for more information.
 
-You may link your character to an NPC by adding the `EngineNPC` tag to the model. This model must have a `PrimaryPart` set.
+You must 	link your character to an NPC by adding the `EngineNPC` tag to the model. This model must have a `PrimaryPart` set.
 Next, add a `Character` attribute. This attribute should correspond to the `name` field in the character configuration.
 
 This is enough to get your characters set up and ready to interact with players in your game. However, if you're looking for extra customization, you may do so through the following attributes:

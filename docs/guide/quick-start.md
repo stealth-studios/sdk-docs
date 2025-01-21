@@ -4,7 +4,7 @@ Welcome to the Stealth SDK Quickstart Guide! This guide will walk you through th
 
 ## 🚀 Getting Started
 
-Before you begin, make sure you have the following prerequisites installed:
+Before you begin, we recommend the following prerequisites:
 
 - [Node 23 or higher](https://nodejs.org/)
 - Any preferred Node package manager (NPM, PNPM, Yarn, Bun, etc)
@@ -86,8 +86,9 @@ const core = new Core({
 		file: "file:./db.sqlite",
 	}),
 	framework: new BasicFramework({
-		apiKey: "YOUR_OPENAI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file
-		model: "openai", // Or any other model you prefer
+		apiKey: "YOUR_AI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file
+		provider: "openai", // Or any other provider - supported: openai, anthropic, deepseek
+		model: "chatgpt-4o-latest" // Or any other model that your provider supports
 		memorySize: 15, // How many previous messages should be stored in context? Higher values = higher token usage
 	}),
 	config: {
