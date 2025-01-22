@@ -41,8 +41,8 @@ export default defineVersionedConfig(
 		],
 		themeConfig: {
 			logo: {
-				dark: "/public/stealth-logo.svg",
-				light: "/public/stealth-logo-black.svg",
+				dark: "/stealth-logo.svg",
+				light: "/stealth-logo-black.svg",
 			},
 			editLink: {
 				pattern:
@@ -116,7 +116,10 @@ export default defineVersionedConfig(
 					},
 					{
 						text: "Frameworks",
-						items: [{ text: "Basic", link: "/frameworks/basic" }],
+						items: [
+							{ text: "Basic", link: "/frameworks/basic" },
+							{ text: "Eliza", link: "/frameworks/eliza" },
+						],
 					},
 					{
 						text: "Adapters",

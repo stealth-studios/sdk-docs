@@ -48,10 +48,11 @@ const core = new Core({
 	adapter: new SQLiteAdapter({
 		file: process.env.DATABASE_URL!,
 	}),
-	framework: new BasicFramework({// [!code focus]
+	framework: new BasicFramework({
+		// [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
 		provider: "openai", // [!code focus]
-        model: "chatgpt-4o-latest", // [!code focus]
+		model: "chatgpt-4o-latest", // [!code focus]
 		memorySize: 15, // How many messags of context should the framework remember? // [!code focus]
 	}), // [!code focus]
 	config: {
@@ -83,32 +84,34 @@ The Basic Framework uses a structured format for defining AI characters. Here's 
 
 ```typescript
 interface Character {
-    functions: {
-        name: string;           // Name of the function
-        description: string;    // Description of what the function does
-        parameters: {           // Parameters the function accepts
-            [key: string]: {
-                description: string;
-                type: string;
-            }
-        };
-        callback: Function;     // Function to execute when called. The specific parameters are explained in each client's documentation
-    }[];
-    name: string;               // Name of the character
-    bio: string[];             // Key characteristics and role of the character
-    lore: string[];            // Background story and context for the character
-    knowledge: string[];       // Specific facts the character knows about
-    messageExamples: {         // Example conversations to help shape character behavior
-        user: string;          // The user's message
-        content: string;       // The character's response
-    }[][];
+	functions: {
+		name: string; // Name of the function
+		description: string; // Description of what the function does
+		parameters: {
+			// Parameters the function accepts
+			[key: string]: {
+				description: string;
+				type: string;
+			};
+		};
+		callback: Function; // Function to execute when called. The specific parameters are explained in each client's documentation
+	}[];
+	name: string; // Name of the character
+	bio: string[]; // Key characteristics and role of the character
+	lore: string[]; // Background story and context for the character
+	knowledge: string[]; // Specific facts the character knows about
+	messageExamples: {
+		// Example conversations to help shape character behavior
+		user: string; // The user's message
+		content: string; // The character's response
+	}[][];
 }
 ```
 
 ### 📚 Field Descriptions
 
 - **functions**: Array of functions the character can execute in the game world
-  - Each function includes a name, similar phrases that can trigger it, parameters it accepts, and the callback to execute
+  - Each function includes a name, parameters it accepts, and the callback to execute
 - **bio**: Core traits and characteristics that define the character's personality and role
 - **lore**: Background information that shapes the character's context and history
 - **knowledge**: Specific facts and information the character has access to
