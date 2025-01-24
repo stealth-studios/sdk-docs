@@ -11,7 +11,7 @@ import {
 export default defineVersionedConfig(
 	{
 		title: "Stealth SDK",
-		base: "/sdk-docs/",
+		base: "/",
 		description:
 			"Seamlessly deploy sophisticated intelligences into dynamic game worlds.",
 		cleanUrls: true,
