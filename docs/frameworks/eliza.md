@@ -117,7 +117,7 @@ interface Character {
 }
 ```
 
-### 📚 Field Descriptions
+### Field Descriptions
 
 - **functions**: Array of functions the character can execute in the game world
   - Each function includes a name, similar phrases that can trigger it, examples of how to use it, parameters it accepts, and the callback to execute
@@ -129,7 +129,7 @@ interface Character {
 - **style**: Style of the character
 - **messageExamples**: Sample conversations that demonstrate how the character should interact
 
-### 📊 Example
+### Example
 
 Here's a simple example of a character definition:
 
