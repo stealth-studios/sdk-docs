@@ -26,10 +26,10 @@
 			window.matchMedia("(prefers-color-scheme: dark)").matches
 		) {
 			// dark mode
-			icon.value = withBase("/docs/favicon-dark.ico");
+			icon.value = withBase("/favicon-dark.ico");
 		} else {
 			// light mode
-			icon.value = withBase("/docs/favicon-light.ico");
+			icon.value = withBase("/favicon-light.ico");
 		}
 	};
 
