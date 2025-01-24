@@ -21,8 +21,16 @@
 	const icon = useFavicon();
 
 	const updateFavicon = () => {
-		const isDark = document.documentElement.classList.contains("dark");
-		icon.value = withBase(isDark ? "favicon-dark.ico" : "favicon-light.ico");
+		if (
+			window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches
+		) {
+			// dark mode
+			icon.value = withBase("/docs/favicon-dark.ico");
+		} else {
+			// light mode
+			icon.value = withBase("/docs/favicon-light.ico");
+		}
 	};
 
 	// Initial favicon set
