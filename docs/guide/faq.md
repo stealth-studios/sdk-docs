@@ -8,11 +8,7 @@ Stealth SDK is a framework that enables developers to easily integrate sophistic
 
 ### What AI models does Stealth SDK support?
 
-Stealth SDK currently supports integration with leading AI providers including:
-
-- OpenAI
-- Anthropic
-- DeepSeek
+Stealth SDK currently supports integration with leading AI providers through frameworks. Different frameworks may support different AI providers, so refer to the documentation for each framework to see which AI providers are supported.
 
 ### Is Stealth SDK free to use?
 
