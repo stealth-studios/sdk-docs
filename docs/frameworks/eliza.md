@@ -53,8 +53,7 @@ const core = new Core({
 		provider: "openai", // [!code focus]
 		model: "gpt-4o-mini", // [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
-		elizaConfig: {
-			// [!code focus]
+		elizaConfig: { // [!code focus]
 			USE_OPENAI_EMBEDDING: "true", // [!code focus]
 		}, // [!code focus]
 	}), // [!code focus]
