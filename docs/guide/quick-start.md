@@ -83,7 +83,7 @@ import SQLiteAdapter from "@stealthstudios/sdk-adapter-sqlite";
 
 const core = new Core({
 	adapter: new SQLiteAdapter({
-		file: "file:./db.sqlite",
+		connectionString: "file:./db.sqlite",
 	}),
 	framework: new BasicFramework({
 		apiKey: "YOUR_AI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file

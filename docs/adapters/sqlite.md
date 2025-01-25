@@ -32,9 +32,8 @@ To use the adapter, you need to create an instance of the `SQLiteAdapter` class 
 
 ```typescript
 const core = new Core({
-	adapter: new SQLiteAdapter({
-		// [!code focus]
-		file: "file:./db.sqlite", // [!code focus]
+	adapter: new SQLiteAdapter({ // [!code focus]
+		connectionString: "file:./db.sqlite", // [!code focus]
 	}), // [!code focus]
 	framework: new BasicFramework({
 		apiKey: process.env.API_KEY!,
