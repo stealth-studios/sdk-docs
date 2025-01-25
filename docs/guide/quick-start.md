@@ -88,7 +88,7 @@ const core = new Core({
 	framework: new BasicFramework({
 		apiKey: "YOUR_AI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file
 		provider: "openai", // Or any other provider - supported: openai, anthropic, deepseek
-		model: "chatgpt-4o-latest" // Or any other model that your provider supports
+		model: "chatgpt-4o-latest", // Or any other model that your provider supports
 		memorySize: 15, // How many previous messages should be stored in context? Higher values = higher token usage
 	}),
 	config: {
