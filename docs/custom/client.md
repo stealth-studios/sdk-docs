@@ -137,7 +137,7 @@ interface SendMessageResponse {
 POST /api/update
 ```
 
-This endpoint is used to update a conversation.
+This endpoint is used to update a conversation. Additionally, you may provide a character to use for the conversation instead. Passing a new value to this will, in most cases, wipe all context from the conversation to ensure the previous character's prompts will not affect the new character.
 
 #### Request
 
@@ -148,6 +148,7 @@ interface UpdateConversationRequest {
 		name: string;
 		id: string;
 	}[];
+	character: any;
 }
 ```
 
