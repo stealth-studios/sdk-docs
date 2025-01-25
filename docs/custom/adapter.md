@@ -165,6 +165,19 @@ This method should update the users of the conversation with the provided users.
 
 ---
 
+### Set Conversation Character
+
+```typescript
+abstract setConversationCharacter(
+    conversation: Conversation,
+    character: Character,
+): AsyncOrSync<void>;
+```
+
+The `setConversationCharacter` method is used to set the character of a conversation. It should update the character of the conversation with the provided character. The specific behaviour of this is dependent on the framework and adapter, but, whenever this is called, the conversation should adapt to the new character, even if this means wiping all context.
+
+---
+
 ### Set Conversation Data
 
 ```typescript

@@ -69,7 +69,8 @@ That's all you need to set up a backend using the basic framework! Use any suppo
 The Basic Framework supports the following configuration options:
 
 - `apiKey`: Your API key for the AI model provider
-- `provider`: The AI provider to use for generating responses (supported: `openai`, `anthropic`, `deepseek`)
+- `apiUrl`: The base URL for the AI model provider. This is useful for using providers that clone existing API designs, like DeepSeek.
+- `provider`: The API endpoint design to use for generating responses (supported: `openai`, `anthropic`)
 - `model`: The specific AI model to use for generating responses. Ensure that the model is supported by the provider.
 - `memorySize`: The number of previous messages to remember for context tracking.
 

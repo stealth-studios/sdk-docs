@@ -149,6 +149,19 @@ You may use the `setConversationUsers` adapter method to set the users of the co
 
 ---
 
+### Set Conversation Character
+
+```typescript
+abstract setConversationCharacter(
+    conversation: Conversation,
+    character: Character,
+): AsyncOrSync<void>;
+```
+
+The `setConversationCharacter` method is used to set the character of a conversation. It should update the character of the conversation with the provided character. The specific behaviour of this is dependent on the framework and adapter, but, assume that whenever this is called, all messages in the conversation will be removed in order to ensure the previous character's prompts will not affect the new character.
+
+---
+
 ### Send To Conversation
 
 ```typescript
