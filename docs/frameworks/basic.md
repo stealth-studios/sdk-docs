@@ -22,19 +22,19 @@ Get started by adding the Basic Framework to your project:
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-framework-basic
+npm install @stealthstudios/sdk-framework-basic
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-framework-basic
+yarn add @stealthstudios/sdk-framework-basic
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-framework-basic
+pnpm add @stealthstudios/sdk-framework-basic
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-framework-basic
+bun add @stealthstudios/sdk-framework-basic
 ```
 
 :::
@@ -48,7 +48,8 @@ const core = new Core({
 	adapter: new SQLiteAdapter({
 		file: process.env.DATABASE_URL!,
 	}),
-	framework: new BasicFramework({ // [!code focus]
+	framework: new BasicFramework({
+		// [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
 		provider: "openai", // [!code focus]
 		model: "chatgpt-4o-latest", // [!code focus]

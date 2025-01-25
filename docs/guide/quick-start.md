@@ -31,19 +31,19 @@ The SDK runs on a core package, used to connect the framework and adapters toget
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-core
+npm install @stealthstudios/sdk-core
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-core
+yarn add @stealthstudios/sdk-core
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-core
+pnpm add @stealthstudios/sdk-core
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-core
+bun add @stealthstudios/sdk-core
 ```
 
 :::
@@ -57,19 +57,19 @@ Install these packages using your preferred package manager:
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+npm install @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+yarn add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+pnpm add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
+bun add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
 ```
 
 :::
@@ -77,9 +77,9 @@ bun add @stealth-studios/sdk-framework-basic @stealth-studios/sdk-adapter-sqlite
 To get your backend up and running, you'll need to create a new instance of the SDK core package. Here's how you can do it:
 
 ```js
-import { Core } from "@stealth-studios/sdk-core";
-import BasicFramework from "@stealth-studios/sdk-framework-basic";
-import SQLiteAdapter from "@stealth-studios/sdk-adapter-sqlite";
+import { Core } from "@stealthstudios/sdk-core";
+import BasicFramework from "@stealthstudios/sdk-framework-basic";
+import SQLiteAdapter from "@stealthstudios/sdk-adapter-sqlite";
 
 const core = new Core({
 	adapter: new SQLiteAdapter({

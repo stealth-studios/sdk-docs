@@ -21,19 +21,19 @@ Installation can be done through any preferred package manager:
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-client-ts
+npm install @stealthstudios/sdk-client-ts
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-client-ts
+yarn add @stealthstudios/sdk-client-ts
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-client-ts
+pnpm add @stealthstudios/sdk-client-ts
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-client-ts
+bun add @stealthstudios/sdk-client-ts
 ```
 
 :::
@@ -43,7 +43,7 @@ bun add @stealth-studios/sdk-client-ts
 To get started, you need to create an instance of the `StealthClient` class and pass it the necessary configuration options. An example using the [Basic Framework](../frameworks/basic.md) is shown below:
 
 ```typescript
-import StealthClient from "@stealth-studios/sdk-client-ts";
+import StealthClient from "@stealthstudios/sdk-client-ts";
 
 // Create a new StealthClient instance
 const client = new StealthClient({

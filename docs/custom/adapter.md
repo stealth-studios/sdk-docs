@@ -17,7 +17,7 @@ We recommend using [Drizzle](https://orm.drizzle.team/) to handle your database.
 To create an adapter, you need to extend the `Adapter` class.
 
 ```typescript
-import { Adapter } from "@stealth-studios/sdk-core";
+import { Adapter } from "@stealthstudios/sdk-core";
 
 export class MyAdapter extends Adapter {
 	// ...

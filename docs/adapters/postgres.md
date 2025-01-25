@@ -11,19 +11,19 @@ Get started by adding the Postgres Adapter to your project:
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-adapter-postgres
+npm install @stealthstudios/sdk-adapter-postgres
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-adapter-postgres
+yarn add @stealthstudios/sdk-adapter-postgres
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-adapter-postgres
+pnpm add @stealthstudios/sdk-adapter-postgres
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-adapter-postgres
+bun add @stealthstudios/sdk-adapter-postgres
 ```
 
 :::
@@ -34,7 +34,8 @@ To use the adapter, you need to create an instance of the `PostgresAdapter` clas
 
 ```typescript
 const core = new Core({
-	adapter: new PostgresAdapter({ // [!code focus]
+	adapter: new PostgresAdapter({
+		// [!code focus]
 		connectionString: "CONNECTION_STRING_HERE", // [!code focus]
 	}), // [!code focus]
 	framework: new BasicFramework({

@@ -9,19 +9,19 @@ To use the SQLite Adapter, you need to add it to your project:
 ::: code-group
 
 ```sh [npm]
-npm install @stealth-studios/sdk-adapter-sqlite
+npm install @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [yarn]
-yarn add @stealth-studios/sdk-adapter-sqlite
+yarn add @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [pnpm]
-pnpm add @stealth-studios/sdk-adapter-sqlite
+pnpm add @stealthstudios/sdk-adapter-sqlite
 ```
 
 ```sh [bun]
-bun add @stealth-studios/sdk-adapter-sqlite
+bun add @stealthstudios/sdk-adapter-sqlite
 ```
 
 :::
@@ -32,7 +32,8 @@ To use the adapter, you need to create an instance of the `SQLiteAdapter` class 
 
 ```typescript
 const core = new Core({
-	adapter: new SQLiteAdapter({ // [!code focus]
+	adapter: new SQLiteAdapter({
+		// [!code focus]
 		file: "file:./db.sqlite", // [!code focus]
 	}), // [!code focus]
 	framework: new BasicFramework({

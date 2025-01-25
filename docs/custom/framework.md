@@ -13,7 +13,7 @@ A framework is a class that extends the abstract `Framework` class. These framew
 To create a framework, you need to extend the `Framework` class and define the options for the framework.
 
 ```typescript
-import { Framework } from "@stealth-studios/sdk-core";
+import { Framework } from "@stealthstudios/sdk-core";
 
 interface MyFrameworkOptions {
 	// ...
