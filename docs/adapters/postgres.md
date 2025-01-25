@@ -34,8 +34,7 @@ To use the adapter, you need to create an instance of the `PostgresAdapter` clas
 
 ```typescript
 const core = new Core({
-	adapter: new PostgresAdapter({
-		// [!code focus]
+	adapter: new PostgresAdapter({ // [!code focus]
 		connectionString: "CONNECTION_STRING_HERE", // [!code focus]
 	}), // [!code focus]
 	framework: new BasicFramework({
