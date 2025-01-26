@@ -222,6 +222,17 @@ Returns a Promise that resolves to the Conversation object.
 
 ---
 
+#### `character.updateSelf`
+
+```typescript
+updateSelf(self: Character): Promise<void>
+```
+
+Updates the character's information and all active conversations.
+This is identical to setting `this.character` and calling `conversation.updateCharacter` on all active conversations.
+
+---
+
 #### `character.executeFunctions`
 
 ```typescript

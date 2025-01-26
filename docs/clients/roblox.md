@@ -200,7 +200,7 @@ A character file consists of the following sections:
   - `interestRadius`: The radius in studs within which the character can hear and respond to messages.
 - `events`: View the [Events](#events) section for more information.
 
-You must 	link your character to an NPC by adding the `EngineNPC` tag to the model. This model must have a `PrimaryPart` set.
+You must link your character to an NPC by adding the `EngineNPC` tag to the model. This model must have a `PrimaryPart` set.
 Next, add a `Character` attribute. This attribute should correspond to the `name` field in the character configuration.
 
 This is enough to get your characters set up and ready to interact with players in your game. However, if you're looking for extra customization, you may do so through the following attributes:
@@ -350,6 +350,101 @@ Parameters may only be of type `number`, `string`, or `boolean`. All functions a
 
 This library contains a lot of valuable methods and properties that can be used to provide a more interactive experience for players. Let's have a look at all the methods available per class now.
 
+### Engine
+
+#### `engine.new`
+
+```luau
+engine.new(config: EngineConfig): Engine
+
+type EngineConfig = {
+	url: string,
+	auth: Secret | string,
+}
+```
+
+This function initializes a new engine with the provided configuration. It sets up the engine and registers it in the `activeEngines` table.
+
+---
+
+#### `engine.createCharacter`
+
+```luau
+engine.createCharacter(config: Config): Character
+
+type Config = {
+	characterConfig: {
+		name: string?,
+		individualInteractions: boolean?,
+		persistent: boolean?,
+		character: any & {
+			functions: {
+				{
+					callback: (
+						player: Player,
+						conversation: conversation.Conversation,
+						data: { [string]: any }
+					) -> { success: boolean, message: string? }?,
+					description: string?,
+					parameters: {
+						{
+							name: string,
+							description: string,
+							type: "string" | "number" | "boolean",
+						}
+					},
+				}
+			}?,
+		}, -- framework-specific character data
+	},
+	modelConfig: {
+		interestRadius: number?,
+	}?,
+	events: {
+		onRadiusEnter: ((self: Character, player: Player) -> ())?,
+		onRadiusLeft: ((self: Character, player: Player, conversation: Conversation?) -> ())?,
+		onChatted: ((self: Character, player: Player, message: string) -> ())?,
+		onConversationStart: ((self: Character, conversation: Conversation) -> ())?,
+		onConversationFinish: ((self: Character, conversation: Conversation) -> ())?,
+		onConversationEmpty: ((self: Character, conversation: Conversation) -> ())?,
+	}?,
+}
+```
+
+This function creates a new character.
+
+---
+
+#### `engine.registerCharacter`
+
+```luau
+engine:registerCharacter(character: Character): nil
+```
+
+This function registers a new character with the engine. It merges the default character configuration with the character's full configuration, sets the character's events and configuration, and adds the character to the `characters` table.
+
+---
+
+#### `engine.setDefaultCharacterConfig`
+
+```luau
+engine:setDefaultCharacterConfig(config: Config): nil
+```
+
+This function sets the default character configuration for the engine.
+
+---
+
+#### `engine.loadFolder`
+
+```luau
+engine:loadFolder(folder: Instance): nil
+```
+
+This function loads all character modules from the provided folder and registers them with the engine.
+
+---
+
 ### Character
 
 #### `character:executeFunctions`
@@ -365,7 +460,7 @@ character:executeFunctions(player: Player, functions: {
 })
 ```
 
-This function looks up all functions in either `character.functions` or `character.config.character.functions` and executes all functions that match the names in the `functions` parameter.
+This function looks up all functions in the character configuration and executes all functions that match the names in the `functions` parameter.
 
 ---
 
@@ -389,6 +484,18 @@ character:getConversationForPlayer(
 ```
 
 This function returns the conversation object for the player. If `createNew` is set to `true`, a new conversation will be created if one does not exist.
+
+---
+
+#### `character:updateSelf`
+
+```luau
+character:updateSelf(
+	newCharacter: any & { name: string }
+)
+```
+
+Updates the character's information and applies it to all active conversations. New conversations will use the updated character information.
 
 ---
 
@@ -567,6 +674,16 @@ conversation:removePlayer(player: Player)
 ```
 
 Removes a player from the conversation and updates the backend.
+
+---
+
+#### `conversation:setCharacter`
+
+```luau
+conversation:setCharacter(character: any & { name: string })
+```
+
+Sets the character for the conversation. You must pass all character data (the data that you would normally pass to the `character` field in the character config) to this function.
 
 ---
 
