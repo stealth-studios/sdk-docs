@@ -32,7 +32,8 @@ To use the adapter, you need to create an instance of the `SQLiteAdapter` class 
 
 ```typescript
 const core = new Core({
-	adapter: new SQLiteAdapter({ // [!code focus]
+	adapter: new SQLiteAdapter({
+		// [!code focus]
 		connectionString: "file:./db.sqlite", // [!code focus]
 	}), // [!code focus]
 	framework: new BasicFramework({
@@ -55,4 +56,5 @@ Ensure that the database URL conforms to libSQL's URL format. The library will a
 
 The SQLite Adapter supports the following configuration options:
 
-- `file`: The path to your SQLite database file. Prefix the path with `file:` to use a local file.
+- `connectionString`: The path to your SQLite database file. Prefix the path with `file:` to use a local file.
+- `authToken`: The token to use for authentication. If your database is hosted on a remote server, you can use a token to log in.

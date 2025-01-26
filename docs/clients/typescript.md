@@ -271,6 +271,16 @@ Removes a user from the conversation and updates the backend.
 
 ---
 
+#### `conversation.updateCharacter`
+
+```typescript
+updateCharacter(character: Character): Promise<void>
+```
+
+Updates the character of the conversation.
+
+---
+
 #### `conversation.send`
 
 ```typescript
