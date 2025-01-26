@@ -48,14 +48,12 @@ A simple example on how to use the Eliza framework with SQLite can be found belo
 ```typescript
 const core = new Core({
 	adapter: new EmptyAdapter({}), // [!code focus]
-	framework: new ElizaFramework({
-		// [!code focus]
+	framework: new ElizaFramework({ // [!code focus]
 		adapter: new SqliteDatabaseAdapter(new Database("./local.db")), // [!code focus]
 		provider: "openai", // [!code focus]
 		model: "gpt-4o-mini", // [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
-		elizaConfig: {
-			// [!code focus]
+		elizaConfig: { // [!code focus]
 			USE_OPENAI_EMBEDDING: "true", // [!code focus]
 		}, // [!code focus]
 	}), // [!code focus]

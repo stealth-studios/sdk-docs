@@ -48,8 +48,7 @@ const core = new Core({
 	adapter: new SQLiteAdapter({
 		file: process.env.DATABASE_URL!,
 	}),
-	framework: new BasicFramework({
-		// [!code focus]
+	framework: new BasicFramework({ // [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
 		provider: "openai", // [!code focus]
 		model: "chatgpt-4o-latest", // [!code focus]
