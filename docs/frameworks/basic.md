@@ -91,7 +91,7 @@ interface Character {
 			// Parameters the function accepts
 			[key: string]: {
 				description: string;
-				type: string;
+				type: string; // Available types are: string, number, boolean
 			};
 		};
 		callback: Function; // Function to execute when called. The specific parameters are explained in each client's documentation
