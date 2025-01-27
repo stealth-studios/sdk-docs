@@ -41,7 +41,7 @@ bun add @stealthstudios/sdk-framework-eliza
 ## 🔧 Usage
 
 To use the Eliza framework, you need to create an instance of the `ElizaFramework` class and pass it the necessary configuration options.
-The Eliza framework does not use a StealthSDK adapter, but instead uses it's own adapter system. To account for this, the `EmptyAdapter` is used as a placeholder. Available adapters can be found [here](https://elizaos.github.io/eliza/docs/packages/adapters/).
+The Eliza framework does not use a StealthSDK adapter, but instead uses it's own adapter system. To account for this, the `EmptyAdapter` is used as a placeholder. Available adapters for Eliza can be found in the Eliza documentation [here](https://elizaos.github.io/eliza/docs/packages/adapters/).
 
 A simple example on how to use the Eliza framework with SQLite can be found below:
 
