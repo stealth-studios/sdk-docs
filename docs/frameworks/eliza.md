@@ -53,9 +53,6 @@ const core = new Core({
 		provider: "openai", // [!code focus]
 		model: "gpt-4o-mini", // [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
-		elizaConfig: { // [!code focus]
-			USE_OPENAI_EMBEDDING: "true", // [!code focus]
-		}, // [!code focus]
 	}), // [!code focus]
 	config: {
 		host: "0.0.0.0",
@@ -65,7 +62,7 @@ const core = new Core({
 });
 ```
 
-You may pass additional configuration options to the Eliza framework through the `elizaConfig` field. These are identical to the options that you would normally pass in environment variables to Eliza.
+You may pass additional configuration options to the Eliza framework through environment variables. You must also pass an extra API_KEY environment variable for the specific provider you are using, for example, `OPENAI_API_KEY` for OpenAI.
 
 ## 📝 Configuration
 
@@ -74,8 +71,7 @@ The Eliza Framework supports the following configuration options:
 - `adapter`: The adapter to use for storing and retrieving context.
 - `provider`: The AI provider to use for generating responses. Any provider supported by Eliza is supported.
 - `model`: The specific AI model to use for generating responses. Ensure that the model is supported by the provider.
-- `apiKey`: Your API key for the AI model provider
-- `elizaConfig`: The configuration options to pass to Eliza. These are identical to the options that you would normally pass in environment variables to Eliza.
+- `apiKey`: Your API key for the AI model provider. This is purely used to secure the agents, and is not used for generating responses. Ensure that you pass the correct API key for the provider you are using in the environment variables.
 
 ## 🤖 Character Format
 
