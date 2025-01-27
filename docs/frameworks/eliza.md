@@ -48,7 +48,8 @@ A simple example on how to use the Eliza framework with SQLite can be found belo
 ```typescript
 const core = new Core({
 	adapter: new EmptyAdapter({}), // [!code focus]
-	framework: new ElizaFramework({ // [!code focus]
+	framework: new ElizaFramework({
+		// [!code focus]
 		adapter: new SqliteDatabaseAdapter(new Database("./local.db")), // [!code focus]
 		provider: "openai", // [!code focus]
 		model: "gpt-4o-mini", // [!code focus]
@@ -62,7 +63,7 @@ const core = new Core({
 });
 ```
 
-You may pass additional configuration options to the Eliza framework through environment variables. You must also pass an extra API_KEY environment variable for the specific provider you are using, for example, `OPENAI_API_KEY` for OpenAI.
+You may pass additional configuration options to the Eliza framework through environment variables. These options can be found [here](https://elizaos.github.io/eliza/docs/guides/configuration/). You must also pass an extra API_KEY environment variable for the specific provider you are using, for example, `OPENAI_API_KEY` for OpenAI.
 
 ## 📝 Configuration
 
