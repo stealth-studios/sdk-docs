@@ -566,6 +566,7 @@ model:provideActionFeedback(
 ```
 
 Sends feedback about an action to all participants in a chat. This can be used to inform players about the outcome of a function call.
+It will set the chat bubble connected to the chat to green or red, depending on the status, and display the message in the chat bubble.
 
 ---
 
@@ -615,7 +616,7 @@ Removes a chat from the model's internal chat storage. This should always be cal
 model:cancelChats(target: Conversation)
 ```
 
-Cancels all chats associated with a specific conversation.
+Cancels all chats associated with a specific conversation. This is equivalent to calling `model:cancelChat` for each chat in the conversation.
 
 ---
 
@@ -663,7 +664,7 @@ Sends a message to the AI model and returns the response.
 conversation:addPlayer(player: Player)
 ```
 
-Adds a player to the conversation and lets the backend know.
+Adds a player to the conversation and updates the player list on the backend.
 
 ---
 
