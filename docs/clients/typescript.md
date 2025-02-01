@@ -108,8 +108,9 @@ const character = client.createCharacter({
 		{
 			name: "print",
 			description: "Prints a message to the console.",
-			parameters: {
-				message: {
+			parameters: [
+				{
+					name: "message",
 					description: "The message to print.",
 					type: "string",
 				},

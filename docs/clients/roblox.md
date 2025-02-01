@@ -76,15 +76,18 @@ return client.createCharacter({
 					name = "color",
 					description = "Changes the color of the baseplate",
 					parameters = {
-						r = {
+						{
+							name = "r",
 							description = "The R component of the color to change to",
 							type = "number",
 						},
-						g = {
+						{
+							name = "g",
 							description = "The G component of the color to change to",
 							type = "number",
 						},
-						b = {
+						{
+							name = "b",
 							description = "The B component of the color to change to",
 							type = "number",
 						},
@@ -299,7 +302,7 @@ return client.createCharacter({
 
 You may define functions for your character to execute in the character config. These functions are passed into AI APIs and can be executed by the character in response to player messages.
 
-Example:
+Example for the Basic Framework:
 
 ```luau
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -313,15 +316,18 @@ return client.createCharacter({
 					name = "color",
 					description = "Changes the color of the baseplate",
 					parameters = {
-						r = {
+						{
+							name = "r",
 							description = "The R component of the color to change to",
 							type = "number",
 						},
-						g = {
+						{
+							name = "g",
 							description = "The G component of the color to change to",
 							type = "number",
 						},
-						b = {
+						{
+							name = "b",
 							description = "The B component of the color to change to",
 							type = "number",
 						},
