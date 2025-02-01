@@ -44,14 +44,14 @@ bun add @stealthstudios/sdk-framework-basic
 To use the basic framework, you need to create an instance of the `BasicFramework` class and pass it the necessary configuration options. Here's a simple example:
 
 ```typescript
+import { openai } from "@ai-sdk/openai";
+
 const core = new Core({
 	adapter: new SQLiteAdapter({
 		file: process.env.DATABASE_URL!,
 	}),
 	framework: new BasicFramework({ // [!code focus]
-		apiKey: process.env.API_KEY!, // [!code focus]
-		provider: "openai", // [!code focus]
-		model: "chatgpt-4o-latest", // [!code focus]
+		model: openai("gpt-4o"), // [!code focus]
 		memorySize: 15, // How many messags of context should the framework remember? // [!code focus]
 	}), // [!code focus]
 	config: {
@@ -63,15 +63,13 @@ const core = new Core({
 ```
 
 That's all you need to set up a backend using the basic framework! Use any supported client to integrate with the backend and start building your conversational AI application.
+Ensure that you create an `OPENAI_API_KEY` environment variable in your `.env` file and use `dotenv` to load it.
 
 ## 📝 Configuration
 
 The Basic Framework supports the following configuration options:
 
-- `apiKey`: Your API key for the AI model provider
-- `apiUrl`: The base URL for the AI model provider. This is useful for using providers that clone existing API designs, like DeepSeek.
-- `provider`: The API endpoint design to use for generating responses (supported: `openai`, `anthropic`)
-- `model`: The specific AI model to use for generating responses. Ensure that the model is supported by the provider.
+- `model`: The specific AI model to use for generating responses. We use Vercel's AI SDK to support a wide range of models. Have a look [here](https://sdk.vercel.ai/providers/ai-sdk-providers) to see the supported models and how to use them.
 - `memorySize`: The number of previous messages to remember for context tracking.
 
   :::info
@@ -89,11 +87,10 @@ interface Character {
 		description: string; // Description of what the function does
 		parameters: {
 			// Parameters the function accepts
-			[key: string]: {
-				description: string;
-				type: string; // Available types are: string, number, boolean
-			};
-		};
+			name: string;
+			description: string;
+			type: "string" | "number" | "boolean";
+		}[];
 		callback: Function; // Function to execute when called. The specific parameters are explained in each client's documentation
 	}[];
 	name: string; // Name of the character
