@@ -48,11 +48,9 @@ A simple example on how to use the Eliza framework with SQLite can be found belo
 ```typescript
 const core = new Core({
 	adapter: new EmptyAdapter({}), // [!code focus]
-	framework: new ElizaFramework({
-		// [!code focus]
+	framework: new ElizaFramework({ // [!code focus]
 		adapter: new SqliteDatabaseAdapter(new Database("./local.db")), // [!code focus]
 		provider: "openai", // [!code focus]
-		model: "gpt-4o-mini", // [!code focus]
 		apiKey: process.env.API_KEY!, // [!code focus]
 	}), // [!code focus]
 	config: {
@@ -71,8 +69,9 @@ The Eliza Framework supports the following configuration options:
 
 - `adapter`: The adapter to use for storing and retrieving context.
 - `provider`: The AI provider to use for generating responses. Any provider supported by Eliza is supported.
-- `model`: The specific AI model to use for generating responses. Ensure that the model is supported by the provider.
 - `apiKey`: Your API key for the AI model provider. This is purely used to secure the agents, and is not used for generating responses. Ensure that you pass the correct API key for the provider you are using in the environment variables.
+
+You may edit the model used by Eliza by editing the `LARGE_OPENAI_MODEL` environment variable. Have a look [here](https://github.com/elizaOS/eliza/blob/main/.env.example) as well for more supported environment variables, as some of them are not documented in the Eliza documentation.
 
 ## 🤖 Character Format
 
