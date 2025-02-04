@@ -80,6 +80,7 @@ To get your backend up and running, you'll need to create a new instance of the 
 import { Core } from "@stealthstudios/sdk-core";
 import BasicFramework from "@stealthstudios/sdk-framework-basic";
 import SQLiteAdapter from "@stealthstudios/sdk-adapter-sqlite";
+import { openai } from "@ai-sdk/openai";
 
 const core = new Core({
 	adapter: new SQLiteAdapter({
@@ -87,8 +88,7 @@ const core = new Core({
 	}),
 	framework: new BasicFramework({
 		apiKey: "YOUR_AI_API_KEY", // Replace with your OpenAI API key, preferably from a .env file
-		provider: "openai", // Or any other provider - supported: openai, anthropic, deepseek
-		model: "chatgpt-4o-latest", // Or any other model that your provider supports
+		model: openai("gpt-4o"), // This uses the Vercel AI SDK.
 		memorySize: 15, // How many previous messages should be stored in context? Higher values = higher token usage
 	}),
 	config: {
