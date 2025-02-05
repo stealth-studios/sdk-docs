@@ -53,6 +53,7 @@ To use Stealth SDK, you need:
 
 - Visit our [GitHub organization](https://github.com/stealth-studios) for documentation, issues, and code samples
 - Follow us on X (Twitter) [@StealthSDK](https://twitter.com/StealthSDK) for updates and announcements
+- Join our [Discord Server](https://discord.com/invite/BgsKcMXH8s) to ask questions about StealthSDK and be a part of our community!
 
 ### How can I contribute?
 
