@@ -22,7 +22,8 @@ Stealth SDK currently provides first-class support for:
 
 - Roblox
 - TypeScript
-  With more platforms planned for the future.
+
+With more platforms planned for the future.
 
 ### Do I need to run a backend server?
 
