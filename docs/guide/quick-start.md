@@ -57,19 +57,19 @@ Install these packages using your preferred package manager:
 ::: code-group
 
 ```sh [npm]
-npm install @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
+npm install @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite @ai-sdk/openai
 ```
 
 ```sh [yarn]
-yarn add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
+yarn add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite @ai-sdk/openai
 ```
 
 ```sh [pnpm]
-pnpm add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
+pnpm add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite @ai-sdk/openai
 ```
 
 ```sh [bun]
-bun add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite
+bun add @stealthstudios/sdk-framework-basic @stealthstudios/sdk-adapter-sqlite @ai-sdk/openai
 ```
 
 :::
