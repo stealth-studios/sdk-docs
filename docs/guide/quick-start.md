@@ -101,6 +101,11 @@ const core = new Core({
 core.start();
 ```
 
+and ensure you create an `.env` file that contains at least the following data:
+```
+OPENAI_API_KEY=<your_api_key>
+```
+
 You can run this script using Node:
 
 ```sh
